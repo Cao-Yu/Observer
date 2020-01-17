@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+
+    Total: <span id="Total">10</span>
+    </br>
+
+    <span id = "Appearance">0</span>
+    <button onclick="plus(Appearance)" type="button">+</button>
+    <button onclick="minus(Appearance)" type="button">-</button>
+    <span>Appearance</span>
+    </br>
+
+    <span id = "Fortune">0</span>
+    <button onclick="plus(Fortune)" type="button">+</button>
+    <button onclick="minus(Fortune)" type="button">-</button>
+    <span>Fortune</span>
+    </br> 
+
+    <span id = "Intelligence">0</span>
+    <button onclick="plus(Intelligence)" type="button" >+</button>
+    <button onclick="minus(Intelligence)" type="button">-</button>
+    <span>Intelligence</span>
+    </br>
+
+    <span id = "Luck">0</span>
+    <button onclick="plus(Luck)" type="button">+</button>
+    <button onclick="minus(Luck)" type="button">-</button>
+    <span>Luck</span>
+    <script>    
+    
+function plus(name) {
+  var value = document.getElementById(name.textContent);
+  name.textContent = Number(name.textContent) + 1;
+  var total = document.getElementById("Total");
+  total.textContent = Number(total.textContent) - 1;
+}
+
+function minus(name) {
+  var value = document.getElementById(name.textContent);
+  name.textContent = Number(name.textContent) - 1;
+  var total = document.getElementById("Total");
+  total.textContent = Number(total.textContent) + 1;
+}
+    </script>
+  </body>
+</html>
